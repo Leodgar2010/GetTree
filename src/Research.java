@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 
 public class Research {
-    ArrayList<String> result = new ArrayList<>();
     ArrayList<Node> tree;
+
+    public Research(GeoTree geoTree) {
+        tree = geoTree.getTree();
+    }
 
     public ArrayList<Person> SearchBase(Person p, Relationship re) {
         ArrayList<Person> result = new ArrayList<>();
