@@ -7,7 +7,7 @@ public class Research {
         tree = geoTree.getTree();
     }
 
-    public ArrayList<Person> SearchBase(Person p, Relationship re) {
+    public ArrayList<Person> searchBase(Person p, Relationship re) {
         ArrayList<Person> result = new ArrayList<>();
         for (Node t : tree) {
             if (t.p1 == p && t.re == re) {
@@ -15,9 +15,9 @@ public class Research {
             }
         }return result;
     }
-        public ArrayList<String> SearchSiblings(Person p) {
+        public ArrayList<String> searchSiblings(Person p) {
 
-        ArrayList <Person> mask = SearchBase (p,Relationship.children);
+        ArrayList <Person> mask = searchBase (p,Relationship.children);
         System.out.println(mask);
         ArrayList<String> result = new ArrayList<>();
             for (Person x: mask) {
@@ -29,9 +29,9 @@ public class Research {
             }
         return result;
     }
-    public ArrayList<String> SearchParent(Person p) {
+    public ArrayList<String> searchParent(Person p) {
 
-        ArrayList <Person> mask = SearchBase (p,Relationship.children);
+        ArrayList <Person> mask = searchBase (p,Relationship.children);
         System.out.println(mask);
         ArrayList<String> result = new ArrayList<>();
         for (Person x: mask) {

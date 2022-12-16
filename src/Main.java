@@ -13,8 +13,8 @@ public class Main {
         gt.parentAppend(vasya, ivan);
         gt.parentAppend(petr, vasya);
 
-        System.out.println("Братья/сестры гражданина " +vasya.fullName+":"+new Research(gt).SearchSiblings(vasya));
-        System.out.println("Родители гражданина " +vasya.fullName+ ":" +new Research(gt).SearchParent(vasya));
+        System.out.println("Братья/сестры гражданина " +vasya.fullName+":"+new Research(gt).searchSiblings(vasya));
+        System.out.println("Родители гражданина " +vasya.fullName+ ":" +new Research(gt).searchParent(vasya));
 
 
     }
