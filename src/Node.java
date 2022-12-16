@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Node {
 
     public Node(Person p1, Relationship re, Person p2) {
@@ -12,7 +14,7 @@ public class Node {
 
     @Override
     public String toString() {
-        return String.format("<%s %s %s>", p1, re, p2);
+        return String.format("<%s, %s, %s>", p1, re, p2);
     }
 
 }

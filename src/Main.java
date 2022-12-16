@@ -5,14 +5,18 @@ public class Main {
         Person masha = new Person("Маша");
         Person jane = new Person("Женя");
         Person ivan = new Person("Ваня");
+        Person petr = new Person("Петя");
         GeoTree gt = new GeoTree();
-        gt.append(irina, vasya);
-        gt.append(irina, masha);
-        gt.append(vasya, jane);
-        gt.append(vasya, ivan);
+        gt.parentAppend(irina, vasya);
+        gt.parentAppend(irina, masha);
+        gt.parentAppend(vasya, jane);
+        gt.parentAppend(vasya, ivan);
+        gt.parentAppend(petr, vasya);
 
-        System.out.println(new Reserch(gt).spend(irina,
-                Relationship.parent));
+        System.out.println("Братья/сестры гражданина " +vasya.fullName+":"+new Research(gt).SearchSiblings(vasya));
+        System.out.println("Родители гражданина " +vasya.fullName+ ":" +new Research(gt).SearchParent(vasya));
+
+
     }
 
 }

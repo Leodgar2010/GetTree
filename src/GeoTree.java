@@ -7,9 +7,10 @@ public class GeoTree {
         return tree;
     }
 
-    public void append(Person parent, Person children) {
+    public void parentAppend (Person parent, Person children) {
         tree.add(new Node(parent, Relationship.parent, children));
         tree.add(new Node(children, Relationship.children, parent));
     }
+
 
 }
