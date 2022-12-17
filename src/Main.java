@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Person irina = new Person("Ирина");
         Person vasya = new Person("Вася");
         Person masha = new Person("Маша");
