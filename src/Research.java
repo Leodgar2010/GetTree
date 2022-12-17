@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Research {
     ArrayList<Node> tree;
+    ArrayList<String> result = new ArrayList<>();
 
     public Research(GeoTree geoTree) {
         tree = geoTree.getTree();
@@ -13,32 +14,26 @@ public class Research {
             if (t.p1 == p && t.re == re) {
                 result.add(t.p2);
             }
-        }return result;
-    }
-        public ArrayList<String> searchSiblings(Person p) {
-
-        ArrayList <Person> mask = searchBase (p,Relationship.children);
-        System.out.println(mask);
-        ArrayList<String> result = new ArrayList<>();
-            for (Person x: mask) {
-                for (Node t : tree) {
-                    if (t.p2 == x && !result.contains(t.p1.fullName)&& t.p1!=p) {
-                        result.add(t.p1.fullName);
-                    }
-                }
-            }
+        }
         return result;
     }
-    public ArrayList<String> searchParent(Person p) {
 
-        ArrayList <Person> mask = searchBase (p,Relationship.children);
-        System.out.println(mask);
-        ArrayList<String> result = new ArrayList<>();
-        for (Person x: mask) {
-                     result.add(x.fullName);
+
+    public ArrayList<String> searchSiblings(Person p) {
+        for (Person x : searchBase(p, Relationship.children)) {
+            for (Node t : tree) {
+                if (t.p2 == x && !result.contains(t.p1.fullName) && t.p1 != p) {
+                    result.add(t.p1.fullName);
                 }
+            }
+        }
+        return result;
+    }
 
-
+    public ArrayList<String> searchParent(Person p) {
+        for (Person x : searchBase(p, Relationship.children)) {
+            result.add(x.fullName);
+        }
         return result;
     }
 }
