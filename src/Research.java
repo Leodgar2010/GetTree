@@ -1,6 +1,8 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class Research {
+public class Research implements Output {
     ArrayList<Node> tree;
     ArrayList<String> result = new ArrayList<>();
 
@@ -19,7 +21,7 @@ public class Research {
     }
 
 
-    public ArrayList<String> searchSiblings(Person p) {
+    public ArrayList<String> searchSiblings(Person p) throws IOException {
         for (Person x : searchBase(p, Relationship.children)) {
             for (Node t : tree) {
                 if (t.p2 == x && !result.contains(t.p1.fullName) && t.p1 != p) {
@@ -27,14 +29,23 @@ public class Research {
                 }
             }
         }
+        outputToFile("ResultSibling.txt", result);
         return result;
     }
 
-    public ArrayList<String> searchParent(Person p) {
+    public ArrayList<String> searchParent(Person p) throws IOException {
         for (Person x : searchBase(p, Relationship.children)) {
             result.add(x.fullName);
         }
+        outputToFile("ResultParent.txt", result);
         return result;
+    }
+
+    @Override
+    public void outputToFile(String filename, ArrayList n) throws IOException {
+        FileWriter fileWriter = new FileWriter(filename);
+        fileWriter.write(String.valueOf(n));
+        fileWriter.flush();
     }
 }
 
