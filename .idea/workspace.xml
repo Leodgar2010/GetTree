@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce0e8705-8dee-4866-8259-17301113e20f" name="Changes" comment="Внес исправления по замечаниям преподавателя">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Output.java" afterDir="false" />
+    <list default="true" id="ce0e8705-8dee-4866-8259-17301113e20f" name="Changes" comment="Поигался с итератором и компаратором. Итератор не переписывал. Подумаю на каникулах как сделать интереснее.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeoTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeoTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Research.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Research.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671264929810</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Поигался с итератором и компаратором. Итератор не переписывал. Подумаю на каникулах как сделать интереснее.">
+      <created>1671571741385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671571741385</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +118,8 @@
     <MESSAGE value="Переработал класс Research добавил методы поиска родителей и братьев/сестёр" />
     <MESSAGE value="Исправил названия методов" />
     <MESSAGE value="Внес исправления по замечаниям преподавателя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внес исправления по замечаниям преподавателя" />
+    <MESSAGE value="Поигался с итератором и компаратором" />
+    <MESSAGE value="Поигался с итератором и компаратором. Итератор не переписывал. Подумаю на каникулах как сделать интереснее." />
+    <option name="LAST_COMMIT_MESSAGE" value="Поигался с итератором и компаратором. Итератор не переписывал. Подумаю на каникулах как сделать интереснее." />
   </component>
 </project>
